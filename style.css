@@ -1,0 +1,331 @@
+/* ===== GLOBAL RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Inter",sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fbfb;
+color:#333;
+line-height:1.6;
+}
+
+
+/* ===== COLOR THEME ===== */
+
+:root{
+--primary:#2fa4a9;
+--secondary:#e8f7f8;
+--accent:#0f6d71;
+--text:#333;
+--light:#ffffff;
+}
+
+
+/* ===== SECTION SPACING ===== */
+
+section{
+padding:70px 10%;
+}
+
+
+/* ===== HERO SECTION ===== */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.hero h1{
+font-size:42px;
+color:var(--accent);
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+max-width:500px;
+}
+
+
+/* ===== BUTTONS ===== */
+
+button,
+.btn{
+background:var(--primary);
+color:white;
+padding:12px 24px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+button:hover,
+.btn:hover{
+background:var(--accent);
+}
+
+
+/* ===== BUTTON GLOW EFFECT ===== */
+
+.btn-glow{
+position:relative;
+overflow:hidden;
+}
+
+.btn-glow:hover{
+box-shadow:0 0 15px rgba(47,164,169,0.6);
+}
+
+
+/* ===== STATS SECTION ===== */
+
+.hero-stat-num{
+font-size:32px;
+font-weight:700;
+color:var(--primary);
+}
+
+.hero-stat-label{
+font-size:14px;
+color:#777;
+}
+
+
+/* ===== CARD STYLE ===== */
+
+.card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+
+/* ===== CARD HOVER EFFECT ===== */
+
+.card-hover{
+transition:all 0.3s ease;
+}
+
+.card-hover:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+
+/* ===== DOCTOR CARD ===== */
+
+.doctor-card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+
+/* ===== MAP SECTION ===== */
+
+.map-placeholder{
+width:100%;
+height:350px;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.map-placeholder iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+
+/* ===== CONTACT GRID ===== */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+
+/* ===== BOOKING FORM ===== */
+
+.booking-form{
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus{
+outline:none;
+border-color:var(--primary);
+}
+
+
+/* ===== FAQ SECTION ===== */
+
+.faq-item{
+background:white;
+padding:18px;
+margin-bottom:12px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-q{
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-a{
+margin-top:8px;
+color:#666;
+}
+
+
+/* ===== FADE IN ANIMATION ===== */
+
+.fade-in{
+animation:fadeIn 1s ease forwards;
+opacity:0;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+/* ===== IMAGE STYLE ===== */
+
+img{
+max-width:100%;
+border-radius:10px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer{
+background:#0f6d71;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:50px 6%;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+}
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+.whatsapp-float svg{
+width:32px;
+height:32px;
+}
+/* Google Map styling */
+.map-placeholder iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:12px;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+z-index:9999;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+transition:0.3s;
+}
+
+.whatsapp-float svg{
+width:30px;
+height:30px;
+}
